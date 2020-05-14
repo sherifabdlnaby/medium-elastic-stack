@@ -1,0 +1,11 @@
+---
+server.name: kibana
+server.host: "0.0.0.0"
+
+# Elasticsearch Connection
+elasticsearch.hosts: [ "http://${ELASTICSEARCH_HOST_PORT}" ]
+
+
+## X-Pack security credentials
+elasticsearch.username: ${ELASTIC_USERNAME}
+elasticsearch.password: ${ELASTIC_PASSWORD}

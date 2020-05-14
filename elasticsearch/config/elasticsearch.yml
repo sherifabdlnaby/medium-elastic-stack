@@ -1,0 +1,21 @@
+## Cluster Settings
+cluster.name: ${ELASTIC_CLUSTER_NAME}
+node.name:    ${ELASTIC_NODE_NAME}
+network.host: 0.0.0.0
+transport.host: 0.0.0.0
+discovery.seed_hosts: ${ELASTIC_DISCOVERY_SEEDS}
+cluster.initial_master_nodes: ${ELASTIC_INIT_MASTER_NODE}
+
+## License
+xpack.license.self_generated.type: basic
+
+# Security
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.security.transport.ssl.keystore.path: certs/elastic-certificates.p12
+xpack.security.transport.ssl.truststore.path: certs/elastic-certificates.p12
+
+# Monitoring
+xpack.monitoring.enabled: true
+xpack.monitoring.collection.enabled: true
